@@ -30,7 +30,12 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
+
+  // When deploying to GitHub Pages the `base` should be the repository
+  // name (including correct capitalization). The repo for this project
+  // appears to be named `Sten`, so set the base accordingly so assets
+  // load correctly at https://<user>.github.io/Sten/.
+  base: '/Sten/',
 })
